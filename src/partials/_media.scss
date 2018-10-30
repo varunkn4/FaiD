@@ -1,0 +1,16 @@
+@media only screen and (min-width : 480px) {
+    .switchDevicePrompt{
+        display: block;
+    }
+    .contentView{
+        display: none;
+    }
+}
+@media only screen and (max-width : 480px) {
+    .switchDevicePrompt{
+        display: none;
+    }
+    .contentView{
+        display: block;
+    }
+}

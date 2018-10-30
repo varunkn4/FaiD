@@ -1,0 +1,25 @@
+@import './pages/login/Login';
+@import './pages/home/Home';
+@import './partials/media';
+
+*{
+    font-family: 'Karla', sans-serif;
+}
+.centered{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.left{
+    text-align: left;
+}
+.hidden{
+    display: none;
+}
+.shown{
+    display: initial !important;
+}
+input:-webkit-autofill {
+    background-color: none !important;
+}

@@ -1,0 +1,12 @@
+.switchDevicePrompt{
+  display: none;
+}
+.contentView{
+  background: url('./images/background.jpg');
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: color;
+  background-size: inherit;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+}

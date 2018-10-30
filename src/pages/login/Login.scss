@@ -1,0 +1,76 @@
+.loginContainer{
+    height: 20vh;
+    .logo{
+        img{
+            height: 110px;
+        }
+    }
+    .inputFields{
+        width: 75%;
+        margin: 15px auto 0;
+        .userCredentials{
+            background: none;
+            border-style: none none solid none;
+            border-width: 2px;
+            border-color: rgba(255,255,255,0.5);
+            text-align: center;
+            border-radius: 0;
+            font-style: italic;
+            padding: 0;
+            color: white;
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+        }
+        .loginButton{
+            background: #F38F1C;
+            color: white;
+            font-size: bold;
+            height: 30px;
+            padding: 0;
+        }
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #F38F1C;
+            opacity: 1; /* Firefox */
+        }
+        
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #F38F1C;
+        }
+        
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: #F38F1C;
+        }
+    }
+    .register{
+        .registerMessage{  
+            margin-top: 15vh !important;          
+            label{
+                margin: auto;
+                color: #ffffff;
+                font-style: italic;
+                .registerLink{
+                    color: #F38F1C;
+                    font-weight: bold;
+                }
+            }
+        }
+        .btn{
+            height: 25px;
+            font-size: 14px;
+            padding: 0;
+            color: white;
+            margin-top: 10px;
+            &.facebook{
+                background: #3B5998;
+            }
+            &.twitter{
+                background: #00ACED;
+            }
+            &.googlePlus{
+                background: #D64A37
+            }
+        }        
+    }
+}

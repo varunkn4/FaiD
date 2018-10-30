@@ -1,0 +1,122 @@
+.loginContainer {
+  height: 20vh;
+}
+.loginContainer .logo img {
+  height: 110px;
+}
+.loginContainer .inputFields {
+  width: 75%;
+  margin: 15px auto 0;
+}
+.loginContainer .inputFields .userCredentials {
+  background: none;
+  border-style: none none solid none;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  border-radius: 0;
+  font-style: italic;
+  padding: 0;
+  color: white;
+}
+.loginContainer .inputFields .userCredentials:focus {
+  outline: none;
+  box-shadow: none;
+}
+.loginContainer .inputFields .loginButton {
+  background: #F38F1C;
+  color: white;
+  font-size: bold;
+  height: 30px;
+  padding: 0;
+}
+.loginContainer .inputFields ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #F38F1C;
+  opacity: 1;
+  /* Firefox */
+}
+.loginContainer .inputFields :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #F38F1C;
+}
+.loginContainer .inputFields ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #F38F1C;
+}
+.loginContainer .register .registerMessage {
+  margin-top: 15vh !important;
+}
+.loginContainer .register .registerMessage label {
+  margin: auto;
+  color: #ffffff;
+  font-style: italic;
+}
+.loginContainer .register .registerMessage label .registerLink {
+  color: #F38F1C;
+  font-weight: bold;
+}
+.loginContainer .register .btn {
+  height: 25px;
+  font-size: 14px;
+  padding: 0;
+  color: white;
+  margin-top: 10px;
+}
+.loginContainer .register .btn.facebook {
+  background: #3B5998;
+}
+.loginContainer .register .btn.twitter {
+  background: #00ACED;
+}
+.loginContainer .register .btn.googlePlus {
+  background: #D64A37;
+}
+
+@media only screen and (min-width: 480px) {
+  .switchDevicePrompt {
+    display: block;
+  }
+
+  .contentView {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .switchDevicePrompt {
+    display: none;
+  }
+
+  .contentView {
+    display: block;
+  }
+}
+* {
+  font-family: "Karla", sans-serif;
+}
+
+.centered {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.hidden {
+  display: none;
+}
+
+.shown {
+  display: initial !important;
+}
+
+input:-webkit-autofill {
+  background-color: none !important;
+}
+
+/*# sourceMappingURL=styles.css.map */
