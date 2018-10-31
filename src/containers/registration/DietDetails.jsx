@@ -4,7 +4,7 @@ import Dropdown from '../../components/dropdown/Dropdown';
 class DietDetails extends Component{
     render() {
         return(
-            <div className="wrapper">
+            <div>
                 <div className="row m-0 guide mt-3">
                     <div className="">
                         <img src={require('../../images/guide.png')} alt="" className="guideAvatar" />
@@ -49,10 +49,22 @@ class DietDetails extends Component{
                 </div>
                 <div className="row m-0 pr-3 pl-3 mt-4">
                     <div className="allergySpecifier entryContainer">
-                        <label htmlFor="" className="fieldEntryLabel" id="fullName">Allergic to certain food?</label>
+                        <label htmlFor="" className="fieldEntryLabel" id="fullName">Do you avoid certain food?</label>
                         {/* <input type="text" name="" id="nameEntry" className="fieldEntryText"/> */}
                         <Dropdown />
                     </div>          
+                </div>
+                <div className="row m-0 pr-3 pl-3 mt-4">
+                    <div className="registrationNavButtons entryContainer">
+                        <div className="row m-0">
+                            <div className="col-6 p-0 pr-1">
+                                <button className="navButton">Previous</button>
+                            </div>
+                            <div className="col-6 p-0 pl-1">
+                                <button className="navButton">Next</button>
+                            </div>
+                        </div>               
+                    </div>
                 </div>
             </div>
         );

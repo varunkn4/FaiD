@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class AppHeader extends Component {
   render() {
     return (
-      <div className="wrapper appHead">
+      <div className="appHead">
         <div className="row m-0 h-100">
             <div className="col-6 h-100 p-0">
                 <div className="logoHead">

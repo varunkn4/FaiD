@@ -18,7 +18,7 @@
     .fieldEntryLabel{
         color: #FEA43E;
         font-style: italic;
-        font-size: 20px;
+        font-size: 18px;
     }
     .fieldEntryText{
         width: 100%;
@@ -118,6 +118,37 @@
         }
     }
 }
+.healthSpecifier{
+    .healthContainer{
+        width: 100%;
+        height: 80px;
+        text-align: center;
+        background: #F38F1C;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        .healthAvatar{
+            height: 50%;
+            vertical-align: middle;
+            margin-top: 10px;
+        }
+        .healthLabel{
+            color: white;
+            font-weight: bold;
+            font-size: 10px;
+            margin-top: 5px;
+        }
+        &.otherConditionsContainer{
+            border: 3px solid #F38F1C;
+            background: none;
+            .healthAvatar{
+                height: 40%;
+            }
+            .healthLabel{
+                margin-top: 10px;
+            }
+        }
+    }
+}
 .registrationNavButtons{
     .navButton{
         width: 100%;
@@ -128,6 +159,9 @@
         text-align: center;
         font-weight: bold;
         height: 30px;
+        &.finish{
+            background: #169E3E;
+        }
     }
 }
 .metricsUnit{

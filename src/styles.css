@@ -73,6 +73,11 @@
   background: #D64A37;
 }
 
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+}
+
 .guide .guideAvatar {
   height: 18vh;
   transform: rotate(45deg);
@@ -93,7 +98,7 @@
 .entryContainer .fieldEntryLabel {
   color: #FEA43E;
   font-style: italic;
-  font-size: 20px;
+  font-size: 18px;
 }
 .entryContainer .fieldEntryText {
   width: 100%;
@@ -190,6 +195,36 @@
   background: rgba(255, 77, 77, 0.6);
 }
 
+.healthSpecifier .healthContainer {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  background: #F38F1C;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.healthSpecifier .healthContainer .healthAvatar {
+  height: 50%;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+.healthSpecifier .healthContainer .healthLabel {
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  margin-top: 5px;
+}
+.healthSpecifier .healthContainer.otherConditionsContainer {
+  border: 3px solid #F38F1C;
+  background: none;
+}
+.healthSpecifier .healthContainer.otherConditionsContainer .healthAvatar {
+  height: 40%;
+}
+.healthSpecifier .healthContainer.otherConditionsContainer .healthLabel {
+  margin-top: 10px;
+}
+
 .registrationNavButtons .navButton {
   width: 100%;
   background: #FAB033;
@@ -199,6 +234,9 @@
   text-align: center;
   font-weight: bold;
   height: 30px;
+}
+.registrationNavButtons .navButton.finish {
+  background: #169E3E;
 }
 
 .metricsUnit {
@@ -239,6 +277,7 @@
 
 .dropdown__control {
   width: 100%;
+  height: 40px !important;
   background: none !important;
   border-style: solid !important;
   border-width: 2px !important;

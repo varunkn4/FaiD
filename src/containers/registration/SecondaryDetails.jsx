@@ -4,7 +4,7 @@ import AppHeader from '../../containers/appHeader/AppHeader';
 class SecondaryDetails extends Component {
   render() {
     return (
-      <div className="wrapper">
+      <div>
         <div className="row m-0 guide mt-3">
             <div className="">
                 <img src={require('../../images/guide.png')} alt="" className="guideAvatar" />

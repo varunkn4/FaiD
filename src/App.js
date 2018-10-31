@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { HashRouter as Router } from 'react-router-dom';
+import Routes from './routes';
 import Login from './pages/login/Login';
 import Home from './pages/home/Home';
 import Register from './pages/register/Register';
@@ -15,7 +17,10 @@ class App extends Component {
         </div> 
         <div className="contentView">
           {/* <Login /> */}
-          <Register />
+          {/* <Register /> */}
+          <Router>
+            {Routes}
+          </Router>
         </div>
       </div>
     );

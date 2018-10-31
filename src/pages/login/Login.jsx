@@ -12,8 +12,8 @@ class Login extends Component {
     credentialCheck(credUsername,credPassword){
         if(credUsername === "admin@faid.com"){
             if(credPassword === "faid@123"){
-                alert("Login Success!");
-                this.context.router.push('/home');
+                //alert("Login Success!");
+                this.context.router.history.push('/register');
             }
         }
     }

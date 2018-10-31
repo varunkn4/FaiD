@@ -4,7 +4,7 @@ import Calender from '../../components/calender/Calender';
 class BasicDetails extends Component { 
   render() {
     return (
-      <div className="wrapper">
+      <div className="">
         <div className="row m-0 guide mt-3">
           <div className="">
             <img src={require('../../images/guide.png')} alt="" className="guideAvatar" />
