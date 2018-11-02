@@ -19,7 +19,7 @@ class Dropdown extends Component {
     render(){
         const { selectedOption } = this.state;
         return(
-            <Select value={selectedOption}  onChange={this.handleChange} options={options} isMulti classNamePrefix="dropdown" menuPlacement="auto"/>
+            <Select value={selectedOption}  onChange={this.handleChange} options={options} isMulti classNamePrefix="dropdown" menuPlacement="auto" />
         );
     }
 }

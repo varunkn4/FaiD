@@ -78,8 +78,22 @@
         width: 100%;
         background: rgba(243,143,28,0.6);
         text-align: center;
+        cursor: pointer;
+        border-radius: 5px;
         .genderAvatar{
             height: 100%;
+        }
+        &:hover{
+            background: rgba(14, 186, 222,0.8);
+            .genderAvatar{
+                -ms-transform: scale(1, 1);
+                -webkit-transform: scale(1, 1);
+                transform: scale(1.25, 1.25);
+            }
+        }
+        &.genderSelected{
+            background: rgba(14, 186, 222,0.8);
+            border: 2px solid rgb(243,143,28);
         }
     }
 }
@@ -96,6 +110,7 @@
         width: 100%;
         height: 75px;
         text-align: center;
+        border-radius: 5px; 
         .dietAvatar{
             height: 50%;
             vertical-align: middle;
@@ -106,6 +121,11 @@
             font-weight: bold;
             font-size: 10px;
             margin-top: 5px;
+        }
+        &.dietSelected{
+            // background: rgba(76, 190, 212, 0.8);
+            // border: 2px solid rgb(243,143,28);
+            border: 3px solid rgb(14, 186, 222);
         }
         &.greenContainer{
             background: rgba(120,252,120,0.6);
@@ -136,6 +156,10 @@
             font-weight: bold;
             font-size: 10px;
             margin-top: 5px;
+        }
+        &.activeIdentifier{
+            background: rgba(14, 186, 222,0.8);
+            border: 2px solid rgb(243,143,28);
         }
         &.otherConditionsContainer{
             border: 3px solid #F38F1C;
@@ -173,6 +197,13 @@
     font-weight: bold;
     height: 100%;
     width: 25%;
+    &:focus{
+        outline: none;
+        box-shadow: none;
+    }
+    &:hover{
+        background: rgba(14, 186, 222,0.8);
+    }
 }
 .disclaimer{
     color: #00ced1;
@@ -181,4 +212,11 @@
     font-weight: bold;
     width: 100%;
     font-style: italic;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }

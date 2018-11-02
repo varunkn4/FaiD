@@ -53,6 +53,10 @@
                 .registerLink{
                     color: #F38F1C;
                     font-weight: bold;
+                    cursor: pointer;
+                    &:hover{
+                        color: #0EBADE;
+                    }
                 }
             }
         }

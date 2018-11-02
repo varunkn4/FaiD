@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
+import { HashRouter as Router } from 'react-router-dom';
 import AppHeader from '../../containers/appHeader/AppHeader';
-import BasicDetails from '../../containers/registration/BasicDetails';
-import SecondaryDetails from '../../containers/registration/SecondaryDetails';
-import DietDetails from '../../containers/registration/DietDetails';
-import HealthDetails from '../../containers/registration/HealthDetails';
+import Routes from './routes';
+
 
 class Register extends Component {
   render() {
     return (
       <div className="wrapper">
         <AppHeader />
-        <BasicDetails />
+        {/* <BasicDetails /> */}
         {/* <SecondaryDetails /> */}
         {/* <DietDetails /> */}
         {/* <HealthDetails /> */}
+        <Router>
+            {Routes}
+        </Router>
       </div>
     );
   }
