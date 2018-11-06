@@ -1,0 +1,19 @@
+.locationOverlay{
+    font-size: 0.8rem;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #aeaeae;
+    border-radius: 0.3rem;
+    margin: 20vh auto;
+    position: relative;
+    width: 90%;
+    height: 200px;
+    padding-top: 30px;
+    select{
+        width: 80%;
+        margin: 10% auto 0;
+        display: block;
+        height: 30px;
+        text-align: center;
+    }
+}

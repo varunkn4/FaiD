@@ -6,7 +6,8 @@ class BasicDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      genderIdentifier : ""
+      genderIdentifier : "",
+      calendarDate: ''
     }
   }
   genderSelection(genderState){
@@ -22,7 +23,7 @@ class BasicDetails extends Component {
     event.stopPropagation();
     const { nameEntry } = event.target;
     const userNameInput = nameEntry.value;
-    alert([this.state.genderIdentifier,userNameInput]);
+    alert([this.state.genderIdentifier,userNameInput,this.state.calendarDate]);
     this.context.router.history.push('/register/secondaryDetails');
   }
   render() {
@@ -65,7 +66,7 @@ class BasicDetails extends Component {
           <div className="row m-0 pr-3 pl-3 mt-4">
             <div className="ageSpecifier entryContainer">
               <label htmlFor="" className="fieldEntryLabel" id="dateOfBirth">When were you born?</label>
-              <Calender calenderClass="fieldEntryButton defaultButton" />
+              <Calender calenderClass="fieldEntryButton defaultButton" calenderInput={calendarDate => {this.setState({calendarDate})}} />
             </div>          
           </div>
           <div className="row m-0 pr-3 pl-3 mt-4">

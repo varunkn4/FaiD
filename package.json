@@ -31,5 +31,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "react-country-region-selector": "^1.4.1"
+  }
 }

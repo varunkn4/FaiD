@@ -13,13 +13,23 @@ class Calender extends Component{
         this.handleChange = this.handleChange.bind(this);
       }
       handleChange(date) {
-        this.setState({
-          startDate: date
-        });
+        this.setState({startDate:date});
+        var getDateValue = moment(date).format('D/M/YYYY'); 
+        this.props.calenderInput(getDateValue);
       }
     render() {
         return(
-            <DatePicker selected={this.state.startDate} onChange={this.handleChange} className={this.props.calenderClass} dateFormat="DD/MM/YYYY" maxDate={moment()} withPortal />
+            <DatePicker 
+              selected={this.state.startDate}
+              onChange={this.handleChange}
+              className={this.props.calenderClass} 
+              maxDate={moment()} 
+              withPortal              
+              showMonthDropdown
+              showYearDropdown
+              dropdownMode="select" 
+              dateFormat="Do MMMM YYYY"
+            />
         );
     }
 }

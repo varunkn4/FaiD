@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Location from '../../components/location/Location'
 
 class SecondaryDetails extends Component { 
   constructor(props) {
     super(props);
     this.state = {
       heightMetric: "cm",
-      weightMetric: "kg"
+      weightMetric: "kg",
+      country: '',
+      region: '',
+      invokeLocator: 'hidden',
+      locationVisibility: '',
+      countrySelection: '',
+      regionSelection: '',
     }
   }
   heightMetricSwap(currentHeightMetric){
@@ -36,11 +43,19 @@ class SecondaryDetails extends Component {
     const { heightEntry, weightEntry } = event.target;
     const userHeightInput = heightEntry.value + this.state.heightMetric;
     const userWeightInput = weightEntry.value + this.state.weightMetric;
-    alert([userHeightInput, userWeightInput]);
+    alert([userHeightInput, userWeightInput, this.state.countrySelection, this.state.regionSelection]);
     this.context.router.history.push('/register/dietDetails');
   }
   goToPrevPage() {
     this.context.router.history.push('/register/basicDetails');
+  }
+  showLocationPicker() {
+    this.setState({invokeLocator:'visible'});
+    this.setState({locationVisibility:'visible'});
+  }
+  closeLocationSelect() {
+    this.setState({locationVisibility:'hidden'});
+    //alert([this.state.countrySelection, this.state.regionSelection]);
   }
   render() {
     return (
@@ -60,9 +75,28 @@ class SecondaryDetails extends Component {
           <div className="row m-0 pr-3 pl-3 mt-4">
             <div className="locationSpecifier entryContainer">
               <label htmlFor="" className="fieldEntryLabel" id="dateOfBirth">Where are you from?</label>
-              <button className="fieldEntryButton defaultButton" type>
-                  <i class="fas fa-map-marker-alt"></i>
+              <button className="fieldEntryButton defaultButton" type="button" onClick={()=> this.showLocationPicker()}>
+                  { this.state.regionSelection === ''
+                    ? <i class="fas fa-map-marker-alt"></i>
+                    : <i>{this.state.regionSelection}</i>
+                  }
+                  {/* <i class="fas fa-map-marker-alt"></i> */}
               </button>
+              <div className={this.state.invokeLocator}>
+                {/* {this.state.invokeLocationSelector === 'visible'
+                    ? <Location invokeState={this.state.invokeLocationSelector}/>  
+                    : null
+                }                 */}
+                  <div className={"locationUnderlay " + this.state.locationVisibility}>
+                    <Location 
+                      countryValue={countrySelection => {this.setState({countrySelection})}} 
+                      regionValue={regionSelection => {this.setState({regionSelection})}}
+                    /> 
+                    <div className="closeLocation">
+                      <button type="button" className="btn btn-danger" onClick={() => this.closeLocationSelect()}>Close</button>
+                    </div>                    
+                  </div>
+              </div>
             </div>          
           </div>
           <div className="row m-0 pr-3 pl-3 mt-4">

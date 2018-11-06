@@ -68,7 +68,7 @@ class HealthDetails extends Component {
                                 </div>
                             </div>
                             <div className="col-4 pr-0 pl-1">
-                                <div className={"healthContainer " + this.healthType('Obesity')} onClick={() => this.healthSelection("Obiesity")}>
+                                <div className={"healthContainer " + this.healthType('Obesity')} onClick={() => this.healthSelection("Obesity")}>
                                     <img src={require('../../images/icons/obiesity.png')} alt="" className="healthAvatar" />
                                     <p className="healthLabel">Obesity</p>
                                 </div>
