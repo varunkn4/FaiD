@@ -6,7 +6,9 @@ class DietDetails extends Component{
     constructor(props) {
         super(props);
         this.state = {
-          dietidentifier : ""
+            dietidentifier : "",
+            allergySelection: '',
+            avoidanceSelecion: ''
         }
     }
     dietSelection(dietState){
@@ -20,7 +22,11 @@ class DietDetails extends Component{
     }
     getDietDetails = (event) => {
         event.stopPropagation();
-        alert(this.state.dietidentifier);
+        alert([
+            this.state.dietidentifier,
+            this.state.allergySelection,
+            this.state.avoidanceSelecion
+        ]);
         this.context.router.history.push('/register/healthDetails');
       }
     goToPrevPage() {

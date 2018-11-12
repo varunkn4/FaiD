@@ -44,6 +44,12 @@
   /* Microsoft Edge */
   color: #F38F1C;
 }
+.loginContainer .register {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100vw;
+}
 .loginContainer .register .registerMessage {
   margin-top: 15vh !important;
 }
@@ -224,6 +230,7 @@
   background: #F38F1C;
   border-radius: 5px;
   margin-bottom: 10px;
+  position: relative;
 }
 .healthSpecifier .healthContainer .healthAvatar {
   height: 50%;
@@ -249,6 +256,17 @@
 }
 .healthSpecifier .healthContainer.otherConditionsContainer .healthLabel {
   margin-top: 10px;
+}
+.healthSpecifier .healthClear {
+  width: 100%;
+  padding: 0;
+}
+.healthSpecifier .healthClear button {
+  height: 20px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0;
 }
 
 .registrationNavButtons .navButton {

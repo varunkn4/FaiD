@@ -146,6 +146,7 @@
         background: #F38F1C;
         border-radius: 5px;
         margin-bottom: 10px;
+        position: relative;
         .healthAvatar{
             height: 50%;
             vertical-align: middle;
@@ -161,7 +162,7 @@
             background: rgba(14, 186, 222,0.8);
             border: 2px solid rgb(243,143,28);
         }
-        &.otherConditionsContainer{
+        &.otherConditionsContainer{         
             border: 3px solid #F38F1C;
             background: none;
             .healthAvatar{
@@ -170,6 +171,17 @@
             .healthLabel{
                 margin-top: 10px;
             }
+        }
+    }
+    .healthClear{
+        width: 100%;
+        padding: 0;
+        button{
+            height: 20px;
+            width: 100%;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 0;
         }
     }
 }

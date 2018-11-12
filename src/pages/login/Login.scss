@@ -44,6 +44,10 @@
         }
     }
     .register{
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        width: 100vw;
         .registerMessage{  
             margin-top: 15vh !important;          
             label{
