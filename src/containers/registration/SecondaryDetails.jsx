@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Location from '../../components/location/Location'
+import { connect } from 'react-redux';
 
 class SecondaryDetails extends Component { 
   constructor(props) {
@@ -43,7 +44,8 @@ class SecondaryDetails extends Component {
     const { heightEntry, weightEntry } = event.target;
     const userHeightInput = heightEntry.value + this.state.heightMetric;
     const userWeightInput = weightEntry.value + this.state.weightMetric;
-    alert([userHeightInput, userWeightInput, this.state.countrySelection, this.state.regionSelection]);
+    //alert([userHeightInput, userWeightInput, this.state.countrySelection, this.state.regionSelection]);
+    this.props.setSecondaryDataData(userHeightInput, userWeightInput, this.state.countrySelection, this.state.regionSelection);
     this.context.router.history.push('/register/dietDetails');
   }
   goToPrevPage() {
@@ -140,4 +142,11 @@ SecondaryDetails.contextTypes = {
   router: PropTypes.object.isRequired
 }
 
-export default SecondaryDetails;
+const mapDispatchToProps = {
+    setSecondaryDataData: (userHeight, userWeight, country, region) => ({ type: 'REGISTRATION:SECDATA:SET', data: { userHeight, userWeight, country, region }})
+};
+
+export default connect(
+    null,
+    mapDispatchToProps,
+)(SecondaryDetails);
