@@ -180,15 +180,15 @@
   z-index: 999;
 }
 .popUpUnderlay .homePopUpOrange {
-  height: 80%;
+  height: 85%;
   width: 90%;
-  margin: 20% auto 0;
+  margin: 15% auto 0;
   background: #F38F1C;
   border-radius: 10px;
 }
 .popUpUnderlay .homePopUpOrange .popUpTitle {
-  height: 200px;
-  width: 200px;
+  height: 175px;
+  width: 175px;
   border: 10px solid white;
   border-radius: 50%;
   margin: auto;
@@ -213,11 +213,58 @@
   font-style: italic;
 }
 .popUpUnderlay .homePopUpOrange .popUpTileContainer .popUpTile {
-  border: 2px solid white;
+  border: 5px solid white;
   width: 100%;
   height: 60px;
   border-radius: 10px;
   margin-top: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.popUpUnderlay .homePopUpOrange .popUpTileContainer .popUpTile label {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  margin-top: 14px;
+}
+.popUpUnderlay .homePopUpOrange .popUpTileContainer .popUpTile .moodEmoticon {
+  color: #FFDA09;
+  font-size: 30px;
+  margin-top: 10px;
+}
+.popUpUnderlay .homePopUpOrange .popUpTileContainer .popUpTile:hover {
+  background: #FFDA09;
+  border: none;
+}
+.popUpUnderlay .homePopUpOrange .popUpTileContainer .popUpTile:hover .moodEmoticon {
+  color: white;
+  margin-top: 15px;
+}
+.popUpUnderlay .homePopUpOrange .popUpTileContainer .popUpTile:hover label {
+  margin-top: 19px;
+}
+.popUpUnderlay .homePopUpOrange .popUpTileContainer .popUpTile.activeMood {
+  background: rgba(14, 186, 222, 0.8);
+  border: 5px solid #FFDA09;
+}
+.popUpUnderlay .homePopUpOrange .popUpTileContainer .popUpTile.activeMood:hover {
+  border: 5px solid white;
+}
+.popUpUnderlay .homePopUpOrange .popUpTileContainer .popUpTile.activeMood:hover .moodEmoticon {
+  margin-top: 10px;
+}
+.popUpUnderlay .homePopUpOrange .popUpTileContainer .popUpTile.activeMood:hover label {
+  margin-top: 14px;
+}
+.popUpUnderlay .homePopUpOrange .popUpTileContainer .popUpNavigation {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  height: 30px;
+  cursor: pointer;
 }
 
 .wrapper {

@@ -15,6 +15,11 @@ class Login extends Component {
                 this.context.router.history.push('/home');
             }
         }
+        if(credUsername === "ssmith@faid.com"){
+            if(credPassword === "smith123"){
+                this.context.router.history.push('/home');
+            }
+        }
     }
     registerUser() {
         this.context.router.history.push('/register');
