@@ -63,7 +63,7 @@ class BasicDetails extends Component {
           <div className="row m-0 pr-3 pl-3 mt-4">
             <div className="nameSpecifier entryContainer">
               <label htmlFor="" className="fieldEntryLabel" id="fullName">What do I call you?</label>
-              <input type="text" name="" id="nameEntry" className="fieldEntryText" />
+              <input type="text" name="" id="nameEntry" className="fieldEntryText" autocomplete="off"/>
             </div>          
           </div>
           <div className="row m-0 pr-3 pl-3 mt-4">
