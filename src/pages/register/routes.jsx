@@ -4,6 +4,7 @@ import BasicDetails from '../../containers/registration/BasicDetails';
 import SecondaryDetails from '../../containers/registration/SecondaryDetails';
 import DietDetails from '../../containers/registration/DietDetails';
 import HealthDetails from '../../containers/registration/HealthDetails';
+import UserCredentials from '../../containers/registration/UserCredentials';
 
 export default (
     <Route>
@@ -13,6 +14,7 @@ export default (
             <Route path="/register/secondaryDetails" component={SecondaryDetails} />
             <Route path="/register/dietDetails" component={DietDetails} />
             <Route path="/register/healthDetails" component={HealthDetails} />
+            <Route path="/register/userCredentials" component={UserCredentials} />
       </Switch>
     </Route>
   );

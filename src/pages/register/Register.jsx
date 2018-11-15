@@ -9,10 +9,6 @@ class Register extends Component {
     return (
       <div className="wrapper">
         <AppHeader />
-        {/* <BasicDetails /> */}
-        {/* <SecondaryDetails /> */}
-        {/* <DietDetails /> */}
-        {/* <HealthDetails /> */}
         <Router>
             {Routes}
         </Router>

@@ -24,7 +24,7 @@ class BasicDetails extends Component {
     const { nameEntry } = event.target;
     const userNameInput = nameEntry.value;
     alert([this.state.genderIdentifier,userNameInput,this.state.calendarDate]);
-    this.context.router.history.push('/register/secondaryDetails');
+    this.context.router.history.push('/register/userCredentials');
   }
   render() {
     return (

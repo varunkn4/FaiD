@@ -47,7 +47,7 @@ class SecondaryDetails extends Component {
     this.context.router.history.push('/register/dietDetails');
   }
   goToPrevPage() {
-    this.context.router.history.push('/register/basicDetails');
+    this.context.router.history.push('/register/userCredentials');
   }
   showLocationPicker() {
     this.setState({invokeLocator:'visible'});
