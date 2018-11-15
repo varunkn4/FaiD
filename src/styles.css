@@ -44,6 +44,12 @@
   /* Microsoft Edge */
   color: #F38F1C;
 }
+.loginContainer .register {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100vw;
+}
 .loginContainer .register .registerMessage {
   margin-top: 15vh !important;
 }
@@ -55,6 +61,10 @@
 .loginContainer .register .registerMessage label .registerLink {
   color: #F38F1C;
   font-weight: bold;
+  cursor: pointer;
+}
+.loginContainer .register .registerMessage label .registerLink:hover {
+  color: #0EBADE;
 }
 .loginContainer .register .btn {
   height: 25px;
@@ -71,6 +81,466 @@
 }
 .loginContainer .register .btn.googlePlus {
   background: #D64A37;
+}
+
+.dateTimeWeatherContainer {
+  background: rgba(0, 0, 0, 0.5);
+  width: 92%;
+  height: 100px;
+  margin: auto;
+  border-radius: 10px;
+  border: 2px solid #F38F1C;
+}
+.dateTimeWeatherContainer .timeCapsule {
+  height: 130px;
+  width: 130px;
+  background: #F38F1C;
+  position: absolute;
+  top: -15px;
+  right: 5px;
+  border-radius: 50%;
+}
+.dateTimeWeatherContainer .timeCapsule .timeContainer {
+  text-align: center;
+}
+.dateTimeWeatherContainer .timeCapsule .timeContainer .timeLabel {
+  color: white;
+  font-weight: bold;
+  font-size: 45px;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+.dateTimeWeatherContainer .timeCapsule .weatherContainer {
+  text-align: center;
+}
+.dateTimeWeatherContainer .timeCapsule .weatherContainer .weatherContainer {
+  color: #FFDA09;
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: -10px;
+}
+.dateTimeWeatherContainer .timeCapsule .weatherContainer .weatherContainer span {
+  font-size: 12px;
+  vertical-align: top;
+}
+.dateTimeWeatherContainer .locationDate label {
+  color: white;
+  margin-bottom: 0;
+}
+.dateTimeWeatherContainer .locationDate .locationCity {
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 24px;
+}
+.dateTimeWeatherContainer .locationDate .locationCountry {
+  font-style: italic;
+}
+.dateTimeWeatherContainer .locationDate .locationDate {
+  font-weight: bold;
+  color: #FFDA09;
+}
+
+.homeReccomendations {
+  background: rgba(0, 0, 0, 0.5);
+  width: 92%;
+  height: 100px;
+  margin: auto;
+  border-radius: 10px;
+  border: 2px solid #F38F1C;
+}
+
+.homePopularFood {
+  background: rgba(0, 0, 0, 0.5);
+  width: 92%;
+  height: 100px;
+  margin: auto;
+  border-radius: 10px;
+  border: 2px solid #F38F1C;
+}
+
+.homeHeader {
+  color: white;
+  font-weight: bold;
+  margin: 5px 10px;
+}
+
+.nilMessage {
+  font-style: italic;
+  color: #bdbdbd;
+  margin-left: 20px;
+}
+
+.popUpUnderlay {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.popUpUnderlay .homePopUpOrange {
+  height: 80%;
+  width: 90%;
+  margin: 20% auto 0;
+  background: #F38F1C;
+  border-radius: 10px;
+}
+.popUpUnderlay .homePopUpOrange .popUpTitle {
+  height: 200px;
+  width: 200px;
+  border: 10px solid white;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+}
+.popUpUnderlay .homePopUpOrange .popUpTitle .popupAvatar .guideAvatar {
+  position: absolute;
+  width: 50%;
+  right: -40px;
+  top: -60px;
+  transform: rotate(40deg);
+}
+.popUpUnderlay .homePopUpOrange .popUpTitle .popupAvatar .popUpTitleText {
+  text-align: center;
+  width: 85%;
+  margin: 30% auto;
+}
+.popUpUnderlay .homePopUpOrange .popUpTitle .popupAvatar .popUpTitleText label {
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  font-style: italic;
+}
+.popUpUnderlay .homePopUpOrange .popUpTileContainer .popUpTile {
+  border: 2px solid white;
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+}
+
+.guide .guideAvatar {
+  height: 18vh;
+  transform: rotate(45deg);
+  transform: rotate(60deg) translate(0, 30px);
+}
+.guide .guideDialog {
+  color: #FEA43E;
+  font-size: 24px;
+}
+.guide .guideDialog.smallDialog {
+  font-size: 20px;
+}
+
+.entryContainer {
+  width: 75vw;
+  margin: auto;
+}
+.entryContainer .fieldEntryLabel {
+  color: #FEA43E;
+  font-style: italic;
+  font-size: 18px;
+}
+.entryContainer .fieldEntryText {
+  width: 100%;
+  background: none;
+  border-style: none none solid none;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.5);
+  padding: 0 10px;
+  border-radius: 0;
+  font-style: italic;
+  color: white;
+}
+.entryContainer .fieldEntryText:focus {
+  outline: none;
+  box-shadow: none;
+}
+.entryContainer .fieldEntryText.withUnit {
+  width: 70% !important;
+  margin-right: 5%;
+}
+.entryContainer .fieldEntryButton {
+  width: 100%;
+}
+.entryContainer .fieldEntryButton.defaultButton {
+  background: #F38F1C;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  height: 40px;
+}
+.entryContainer .fieldDropdown {
+  width: 100%;
+  background: none;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-style: italic;
+  color: white;
+}
+.entryContainer .fieldDropdown:focus {
+  outline: none;
+  box-shadow: none;
+  background: none;
+}
+.entryContainer.extendedContainer {
+  width: 85%;
+  margin: auto;
+}
+
+.genderSpecifier .genderContainer {
+  height: 80px;
+  width: 100%;
+  background: rgba(243, 143, 28, 0.6);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.genderSpecifier .genderContainer .genderAvatar {
+  height: 100%;
+}
+.genderSpecifier .genderContainer:hover {
+  background: rgba(14, 186, 222, 0.8);
+}
+.genderSpecifier .genderContainer:hover .genderAvatar {
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1.25, 1.25);
+}
+.genderSpecifier .genderContainer.genderSelected {
+  background: rgba(14, 186, 222, 0.8);
+  border: 2px solid #f38f1c;
+}
+
+.ageSpecifier .react-datepicker-wrapper {
+  width: 100%;
+}
+.ageSpecifier .react-datepicker__input-container {
+  width: 100%;
+}
+
+.primaryDietSpecifier .dietContainer {
+  width: 100%;
+  height: 75px;
+  text-align: center;
+  border-radius: 5px;
+}
+.primaryDietSpecifier .dietContainer .dietAvatar {
+  height: 50%;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+.primaryDietSpecifier .dietContainer .dietLabel {
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  margin-top: 5px;
+}
+.primaryDietSpecifier .dietContainer.dietSelected {
+  border: 3px solid #0ebade;
+}
+.primaryDietSpecifier .dietContainer.greenContainer {
+  background: rgba(120, 252, 120, 0.6);
+}
+.primaryDietSpecifier .dietContainer.yellowContainer {
+  background: rgba(243, 143, 28, 0.6);
+}
+.primaryDietSpecifier .dietContainer.redContainer {
+  background: rgba(255, 77, 77, 0.6);
+}
+
+.healthSpecifier .healthContainer {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  background: #F38F1C;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.healthSpecifier .healthContainer .healthAvatar {
+  height: 50%;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+.healthSpecifier .healthContainer .healthLabel {
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  margin-top: 5px;
+}
+.healthSpecifier .healthContainer.activeIdentifier {
+  background: rgba(14, 186, 222, 0.8);
+  border: 2px solid #f38f1c;
+}
+.healthSpecifier .healthContainer.otherConditionsContainer {
+  border: 3px solid #F38F1C;
+  background: none;
+}
+.healthSpecifier .healthContainer.otherConditionsContainer .healthAvatar {
+  height: 40%;
+}
+.healthSpecifier .healthContainer.otherConditionsContainer .healthLabel {
+  margin-top: 10px;
+}
+.healthSpecifier .healthClear {
+  width: 100%;
+  padding: 0;
+}
+.healthSpecifier .healthClear button {
+  height: 20px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0;
+}
+
+.registrationNavButtons .navButton {
+  width: 100%;
+  background: #FAB033;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  height: 30px;
+}
+.registrationNavButtons .navButton.finish {
+  background: #169E3E;
+}
+
+.metricsUnit {
+  background: #F38F1C;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  height: 100%;
+  width: 25%;
+}
+.metricsUnit:focus {
+  outline: none;
+  box-shadow: none;
+}
+.metricsUnit:hover {
+  background: rgba(14, 186, 222, 0.8);
+}
+
+.disclaimer {
+  color: #00ced1;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  font-style: italic;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.locationUnderlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  left: 0;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+.locationUnderlay .closeLocation {
+  position: absolute;
+  bottom: 20px;
+  width: 100vw;
+  text-align: center;
+}
+.appHead {
+  height: 10vh;
+}
+.appHead .logoHead {
+  height: 100%;
+}
+.appHead .logoHead .homeLogo {
+  height: 100%;
+}
+.appHead .mainMenu {
+  height: 100%;
+}
+.appHead .mainMenu .menuIcon {
+  height: 100%;
+}
+
+.dropdown__control {
+  width: 100%;
+  height: 40px !important;
+  background: none !important;
+  border-style: solid !important;
+  border-width: 2px !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  padding: 5px 10px !important;
+  border-radius: 5px !important;
+  font-style: italic !important;
+  color: white !important;
+}
+.dropdown__control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  background: none !important;
+  border: rgba(255, 255, 255, 0.5) !important;
+}
+.dropdown__control .dropdown__placeholder {
+  color: white !important;
+}
+.dropdown__control .dropdown__indicator-separator {
+  display: none;
+}
+.dropdown__control .dropdown__value-container:focus,
+.dropdown__control .dropdown__value-container--is-multi:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  background: none !important;
+  border: rgba(255, 255, 255, 0.5) !important;
+}
+.dropdown__control .dropdown__indicator, .dropdown__control .dropdown__clear-indicator {
+  color: white;
+}
+
+.locationOverlay {
+  font-size: 0.8rem;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #aeaeae;
+  border-radius: 0.3rem;
+  margin: 20vh auto;
+  position: relative;
+  width: 90%;
+  height: 200px;
+  padding-top: 30px;
+}
+.locationOverlay select {
+  width: 80%;
+  margin: 10% auto 0;
+  display: block;
+  height: 30px;
+  text-align: center;
 }
 
 @media only screen and (min-width: 480px) {

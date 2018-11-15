@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Login from './pages/login/Login'
+import { HashRouter as Router } from 'react-router-dom';
+import Routes from './routes';
 import './App.css';
 import './styles.css'
 
@@ -12,7 +13,9 @@ class App extends Component {
           Please switch to a smaller device
         </div> 
         <div className="contentView">
-          <Login />
+          <Router>
+            {Routes}
+          </Router>
         </div>
       </div>
     );

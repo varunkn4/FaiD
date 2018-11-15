@@ -12,10 +12,12 @@ class Login extends Component {
     credentialCheck(credUsername,credPassword){
         if(credUsername === "admin@faid.com"){
             if(credPassword === "faid@123"){
-                alert("Login Success!");
-                this.context.router.push('/home');
+                this.context.router.history.push('/home');
             }
         }
+    }
+    registerUser() {
+        this.context.router.history.push('/register');
     }
     render() {
         return(
@@ -36,7 +38,7 @@ class Login extends Component {
                 </div>
                 <div className="register">
                     <div className="row m-0 registerMessage">
-                        <label htmlFor="">Don't have an account? <span className="registerLink">Register Now!!</span></label>
+                        <label htmlFor="">Don't have an account? <span className="registerLink" onClick={() => this.registerUser()}>Register Now!!</span></label>
                     </div>
                     <div className="row m-0">
                         <div className="col-4 pl-2 pr-1">
