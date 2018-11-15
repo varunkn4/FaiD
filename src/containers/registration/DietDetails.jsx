@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Dropdown from '../../components/dropdown/Dropdown';
 
 class DietDetails extends Component{
@@ -7,8 +8,8 @@ class DietDetails extends Component{
         super(props);
         this.state = {
             dietidentifier : "",
-            allergySelection: '',
-            avoidanceSelecion: ''
+            allergySelection: "",
+            avoidanceSelecion: ""
         }
     }
     dietSelection(dietState){
@@ -22,16 +23,20 @@ class DietDetails extends Component{
     }
     getDietDetails = (event) => {
         event.stopPropagation();
-        alert([
-            this.state.dietidentifier,
-            this.state.allergySelection,
-            this.state.avoidanceSelecion
-        ]);
+        this.props.setDietData(this.state.dietidentifier, this.state.allergySelection, this.state.avoidanceSelecion);
         this.context.router.history.push('/register/healthDetails');
       }
     goToPrevPage() {
         this.context.router.history.push('/register/secondaryDetails');
     }
+    
+    onSelect(selectedValue, type){
+        this.setState({
+            [type]: selectedValue[0].value
+        });
+        debugger;
+    }
+
     render() {
         return(
             <div>
@@ -75,14 +80,14 @@ class DietDetails extends Component{
                         <div className="allergySpecifier entryContainer">
                             <label htmlFor="" className="fieldEntryLabel" id="fullName">Allergic to certain food?</label>
                             {/* <input type="text" name="" id="nameEntry" className="fieldEntryText"/> */}
-                            <Dropdown />
+                            <Dropdown onSelect={(selectedValue) => {this.onSelect(selectedValue,"allergySelection")}} />
                         </div>          
                     </div>
                     <div className="row m-0 pr-3 pl-3 mt-4">
                         <div className="allergySpecifier entryContainer">
                             <label htmlFor="" className="fieldEntryLabel" id="fullName">Do you avoid certain food?</label>
                             {/* <input type="text" name="" id="nameEntry" className="fieldEntryText"/> */}
-                            <Dropdown />
+                            <Dropdown onSelect={(selectedValue) => {this.onSelect(selectedValue,"avoidanceSelecion")}} />
                         </div>          
                     </div>
                     <div className="row m-0 pr-3 pl-3 mt-4">
@@ -107,4 +112,12 @@ DietDetails.contextTypes = {
     router: PropTypes.object.isRequired
 }
 
-export default DietDetails;
+  const mapDispatchToProps = {
+      setDietData: (id, allergy, avoidence) => ({ type: 'REGISTRATION:DIETDATA:SET', data: { id, allergy, avoidence }})
+  };
+  
+  export default connect(
+      null,
+      mapDispatchToProps,
+  )(DietDetails);
+  

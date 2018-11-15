@@ -16,7 +16,7 @@ class UserCredentials extends Component {
     const username = usernameEntry.value;
     const password = passwordEntry.value;
     if(password === passwordConfirm.value){
-      alert([username,password]);
+      //alert([username,password]);
       this.context.router.history.push('/register/secondaryDetails');
     }
     else{

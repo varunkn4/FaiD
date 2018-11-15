@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 class HealthDetails extends Component {
     constructor(props) {
@@ -14,12 +15,18 @@ class HealthDetails extends Component {
             obesity :'',
             acidity :'',
             osteoporosis :'',
-            enableSelectionClear : 'hidden'
+            enableSelectionClear : 'hidden',
+            healthStateData: []
         }
     }
     healthSelection(healthState){
         //this.setState({healthActive:healthState});
         this.setState({enableSelectionClear:'visible'});
+        let tempData = [...this.state.healthStateData, healthState];
+        this.setState({
+            healthStateData: tempData
+        });
+
         if(healthState === "Diabetes"){this.setState({diabetes:'activeIdentifier'})}
         if(healthState === "Cholesterol"){this.setState({cholesterol:'activeIdentifier'})}
         if(healthState === "Blood Pressure"){this.setState({bloodPressure:'activeIdentifier'})}
@@ -37,6 +44,28 @@ class HealthDetails extends Component {
     goToPrevPage() {
         this.context.router.history.push('/register/dietDetails');
     }
+
+    submitDetails(healthStateData,basicDetails, dietDetails, secondaryDetails){
+        debugger;
+        var registerData={
+            "id": "Gokul1sd4",
+            "location": "cochin",
+            "cuisine": "Indian",
+            "long_term_illness": "dysentery",
+            "allergy": "crab",
+            "food_type": "veg",
+            "food_preference": "rice;bread",
+            "avoid_food": "egg",
+            "avoid_flavor": "sweet",
+            "height": "165",
+            "age": "22",
+            "weight": "106"
+        }
+        this.props.register(registerData);
+        alert("User Registered Successfully");
+        this.context.router.history.push('/login');
+    }
+
     clearSelction() {
         this.setState({enableSelectionClear:'hidden'});
         this.setState({
@@ -51,6 +80,8 @@ class HealthDetails extends Component {
         })
     }
     render() {
+        const { healthStateData } = this.state;
+        const { basicDetails, dietDetails, secondaryDetails, registerStatus } = this.props;
         return(
             <div>
                 <div className="row m-0 guide mt-3">
@@ -137,7 +168,7 @@ class HealthDetails extends Component {
                                 <button className="navButton" onClick={() => this.goToPrevPage()}>Previous</button>
                             </div>
                             <div className="col-6 p-0 pl-1">
-                                <button className="navButton finish" type="submit">Finish</button>
+                                <button className="navButton finish" type="submit" onClick={() => this.submitDetails(healthStateData,{basicDetails}, {dietDetails}, {secondaryDetails})}>Finish</button>
                             </div>
                         </div>               
                     </div>
@@ -151,4 +182,19 @@ HealthDetails.contextTypes = {
     router: PropTypes.object.isRequired
   }
 
-export default HealthDetails;
+  const mapStateToProps = state => ({
+    basicDetails: state.registration.basicDetails,
+    dietDetails: state.registration.dietDetails,
+    secondaryDetails: state.registration.secondaryDetails,
+    registerStatus: state.registration.registerStatus 
+  });
+  
+  const mapDispatchToProps = {
+    register: (registerData) => ({ type: 'REGISTRATION:NEW_USER', registerData})
+  };
+  
+  export default connect(
+      mapStateToProps,
+      mapDispatchToProps,
+  )(HealthDetails);
+  

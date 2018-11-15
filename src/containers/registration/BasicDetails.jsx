@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Calender from '../../components/calender/Calender';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
 
 class BasicDetails extends Component { 
   constructor(props) {
@@ -23,7 +25,8 @@ class BasicDetails extends Component {
     event.stopPropagation();
     const { nameEntry } = event.target;
     const userNameInput = nameEntry.value;
-    alert([this.state.genderIdentifier,userNameInput,this.state.calendarDate]);
+    this.props.setBasicData(this.state.genderIdentifier,userNameInput,this.state.calendarDate);
+
     this.context.router.history.push('/register/userCredentials');
   }
   render() {
@@ -88,4 +91,11 @@ BasicDetails.contextTypes = {
   router: PropTypes.object.isRequired
 }
 
-export default BasicDetails;
+const mapDispatchToProps = {
+    setBasicData: (gender, userName, dateOfBirth) => ({ type: 'REGISTRATION:BASICDATA:SET', data: { gender, userName, dateOfBirth }})
+};
+
+export default connect(
+    null,
+    mapDispatchToProps,
+)(BasicDetails);

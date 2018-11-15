@@ -15,6 +15,7 @@ class Dropdown extends Component {
     }
     handleChange = (selectedOption) => {
         this.setState({ selectedOption });
+        this.props.onSelect(selectedOption);
     }
     render(){
         const { selectedOption } = this.state;
