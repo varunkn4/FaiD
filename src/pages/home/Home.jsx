@@ -57,6 +57,9 @@ class Home extends Component {
     closePopUpFull(){
         this.setState({showMoodSelection:'hidden'});
         this.setState({showShortTermPopUp:'hidden'});
+        setTimeout(function(){ 
+            this.context.router.history.push('/loading');
+        }.bind(this), 1500);  
     }
     getUserIllness(){
         //alert(ill);
@@ -240,6 +243,10 @@ class Home extends Component {
             </div>
         );
     }
+}
+
+Home.contextTypes = {
+    router: PropTypes.object.isRequired
 }
 
 export default Home;

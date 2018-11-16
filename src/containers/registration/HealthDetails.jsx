@@ -16,7 +16,8 @@ class HealthDetails extends Component {
             acidity :'',
             osteoporosis :'',
             enableSelectionClear : 'hidden',
-            healthStateData: []
+            healthStateData: [],
+            registrationCompleteStatus: 'hidden'
         }
     }
     healthSelection(healthState){
@@ -46,7 +47,6 @@ class HealthDetails extends Component {
     }
 
     submitDetails(healthStateData,basicDetails, dietDetails, secondaryDetails){
-        debugger;
         var registerData={
             "id": "Gokul1sd4",
             "location": "cochin",
@@ -62,8 +62,7 @@ class HealthDetails extends Component {
             "weight": "106"
         }
         this.props.register(registerData);
-        alert("User Registered Successfully");
-        this.context.router.history.push('/login');
+        this.setState({registrationCompleteStatus:'visible'});
     }
 
     clearSelction() {
@@ -78,6 +77,10 @@ class HealthDetails extends Component {
             acidity:'',
             osteoporosis:''
         })
+    }
+    loinRedirect(){
+        this.setState({registrationCompleteStatus:'hidden'});
+        this.context.router.history.push('/login');
     }
     render() {
         const { healthStateData } = this.state;
@@ -171,6 +174,12 @@ class HealthDetails extends Component {
                                 <button className="navButton finish" type="submit" onClick={() => this.submitDetails(healthStateData,{basicDetails}, {dietDetails}, {secondaryDetails})}>Finish</button>
                             </div>
                         </div>               
+                    </div>
+                </div>
+                <div className={"registerUserPopUp " + this.state.registrationCompleteStatus}>
+                    <div className="proceedDialog pt-4">
+                        <p>Successfully Registered!!</p>
+                        <button type="button" onClick={() => this.loinRedirect()}>Login</button>
                     </div>
                 </div>
             </div>
