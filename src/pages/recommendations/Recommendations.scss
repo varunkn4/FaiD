@@ -1,0 +1,58 @@
+.recommendContainer{
+    width: 90%;
+    margin: 15px auto;
+    height: 170px;
+    border-radius: 10px;
+    border: 2px solid #F38F1C;
+    padding: 10px;
+    background: rgba(0,0,0,0.5);
+    .recomImage{
+        border: 2px solid #F38F1C;
+        border-radius: 10px;
+        overflow: hidden;
+        img{
+            width: 100%;
+        }
+    }
+    .recomTitle{
+        .mainTitle{
+            color: #F38F1C;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+        .cuisineLabel{
+            color: #fff;
+            font-size: 12px;
+            font-style: italic;
+            margin-bottom: 0;
+        }
+    }
+    .recomButtons{
+        .recomClick{            
+            border: none;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            height: 20px;
+            font-size: 12px;
+            width: 100%;
+            cursor: pointer;
+            &:focus{
+                border: none;
+                box-shadow: none;
+                outline: none;        
+            }
+        }
+    }
+    .reconDesc{
+        .dishDesc{
+            margin-top: 10px;
+            font-size: 14px;
+            color: #F38F1C;
+            text-align: justify;
+        }
+    }
+}
+

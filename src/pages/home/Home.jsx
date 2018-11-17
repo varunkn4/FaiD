@@ -59,7 +59,7 @@ class Home extends Component {
         this.setState({showShortTermPopUp:'hidden'});
         setTimeout(function(){ 
             this.context.router.history.push('/loading');
-        }.bind(this), 1500);  
+        }.bind(this), 1000);  
     }
     getUserIllness(){
         //alert(ill);

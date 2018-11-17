@@ -3,6 +3,11 @@ import AppHeader from '../../containers/appHeader/AppHeader';
 import PropTypes from 'prop-types';
 
 class Loading extends Component {
+    componentDidMount(){
+        setTimeout(function(){ 
+            this.context.router.history.push('/recommendations');
+         }.bind(this), 800);
+    }
     render(){
         return(
             <div className="wrapper">
