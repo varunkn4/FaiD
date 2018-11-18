@@ -34,7 +34,7 @@ class DietDetails extends Component{
         this.setState({
             [type]: selectedValue[0].value
         });
-        debugger;
+        //debugger;
     }
 
     render() {

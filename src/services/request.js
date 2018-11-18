@@ -3,7 +3,7 @@ import { store } from '../store';
 
 //#region saga api request functions
 function postMethod(url, requestOption) {
-    debugger;
+    //debugger;
     return new Promise((resolve) => fetch(url, requestOption)
         .then(response => {console.log(response);response.json()})
     )

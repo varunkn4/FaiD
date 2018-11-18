@@ -1,0 +1,77 @@
+.foodTitle{
+    color: #F38F1C;
+    font-size: 24px;
+    font-weight: bold;
+}
+.foodCuisine{
+    color: #FFF;
+    font-size: 18px;
+    font-style: italic;
+}
+.itemImageLarge{
+    img{
+        width: 100%;
+       
+    }
+}
+.itemContents{
+    h5{
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 10px;
+    }    
+    p{        
+        color: #F38F1C;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+}
+.itemAvail{
+    h5{
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 10px;
+    }   
+    .availOutlet{
+        border: 2px solid #F38F1C;
+        border-radius: 10px;
+        height: 35px;
+        margin-top: 15px;
+        position: relative;
+        label{
+            color: #F38F1C;
+            font-weight: bold;
+            margin-left: 15px;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+        span{
+            background: #F38F1C;
+            color: white;
+            font-size: 10px;
+            padding: 2px 10px;
+            border-radius: 10px;
+            position: absolute;
+            right: 5px; 
+            top: 6px;
+        }
+
+    }
+}
+.goBack{
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    &:focus{
+        border: none;
+        box-shadow: none;
+        outline: none;        
+    }
+}

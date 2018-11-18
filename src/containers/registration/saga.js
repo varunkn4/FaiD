@@ -14,7 +14,7 @@ function register(action) {
           store.dispatch({ type: "REGISTRATION:NEW_USER:ERROR", data: "Registration Failed" });
         }
         else{
-            debugger;
+            //debugger;
           store.dispatch({ type: "REGISTRATION:NEW_USER:SUCCESS",data: "Registration Success"});
       }}); 
 }

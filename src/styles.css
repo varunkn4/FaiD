@@ -226,6 +226,7 @@
   font-weight: bold;
   color: white;
   margin-top: 14px;
+  cursor: pointer;
 }
 .popUpUnderlay .homePopUpOrange .popUpTileContainer .popUpTile .moodEmoticon {
   color: #FFDA09;
@@ -272,6 +273,261 @@
   width: 100vw;
 }
 
+.loadingContainer {
+  height: 200px;
+  width: 200px;
+  border: 10px solid #F38F1C;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+.loadingContainer .loadLogo img {
+  width: 75%;
+  margin-top: 20px;
+}
+.loadingContainer .loadAvatar img {
+  width: 55%;
+}
+
+.recommendContainer {
+  width: 90%;
+  margin: 15px auto;
+  height: 170px;
+  border-radius: 10px;
+  border: 2px solid #F38F1C;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.recommendContainer .recomImage {
+  border: 2px solid #F38F1C;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.recommendContainer .recomImage img {
+  width: 100%;
+}
+.recommendContainer .recomTitle .mainTitle {
+  color: #F38F1C;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.recommendContainer .recomTitle .cuisineLabel {
+  color: #fff;
+  font-size: 12px;
+  font-style: italic;
+  margin-bottom: 0;
+}
+.recommendContainer .recomButtons .recomClick {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  height: 20px;
+  font-size: 12px;
+  width: 100%;
+  cursor: pointer;
+}
+.recommendContainer .recomButtons .recomClick:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+.recommendContainer .reconDesc .dishDesc {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #F38F1C;
+  text-align: justify;
+}
+
+.foodTitle {
+  color: #F38F1C;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.foodCuisine {
+  color: #FFF;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.itemImageLarge img {
+  width: 100%;
+}
+
+.itemContents h5 {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.itemContents p {
+  color: #F38F1C;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.itemAvail h5 {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.itemAvail .availOutlet {
+  border: 2px solid #F38F1C;
+  border-radius: 10px;
+  height: 35px;
+  margin-top: 15px;
+  position: relative;
+}
+.itemAvail .availOutlet label {
+  color: #F38F1C;
+  font-weight: bold;
+  margin-left: 15px;
+  font-size: 16px;
+  margin-top: 5px;
+}
+.itemAvail .availOutlet span {
+  background: #F38F1C;
+  color: white;
+  font-size: 10px;
+  padding: 2px 10px;
+  border-radius: 10px;
+  position: absolute;
+  right: 5px;
+  top: 6px;
+}
+
+.goBack {
+  width: 100%;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.goBack:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.craveContainer {
+  height: 175px;
+  width: 175px;
+  border: 8px solid #F38F1C;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+.craveContainer .craveLogo img {
+  width: 75%;
+  margin-top: 20px;
+}
+.craveContainer .craveAvatar img {
+  width: 55%;
+}
+
+.craveTitle {
+  text-align: center;
+  width: 100%;
+}
+.craveTitle h5 {
+  font-weight: bold;
+  color: #FFF;
+  font-style: italic;
+}
+.craveTitle h3 {
+  font-weight: bold;
+  color: #F38F1C;
+}
+
+.craveMessage {
+  width: 100%;
+  text-align: center;
+}
+.craveMessage p {
+  color: #FFF;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.craveMessage h4 {
+  color: #F38F1C;
+  font-weight: bold;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.shopContainer {
+  width: 95%;
+  margin: 10px auto;
+  height: 90px;
+  border-radius: 10px;
+  border: 2px solid #F38F1C;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.shopContainer .shopImage {
+  border: 2px solid #F38F1C;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.shopContainer .shopImage img {
+  width: 100%;
+}
+.shopContainer .shopTitle .mainTitle {
+  color: #F38F1C;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.shopContainer .shopTitle .cuisineLabel {
+  color: #fff;
+  font-size: 10px;
+  font-style: italic;
+  margin-bottom: 0;
+}
+.shopContainer .shopButtons .shopClick {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  height: 20px;
+  font-size: 12px;
+  width: 100%;
+  cursor: pointer;
+}
+.shopContainer .shopButtons .shopClick:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+.shopContainer .rating {
+  height: 25px;
+  width: 25px;
+  border: 1px solid #F38F1C;
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.75;
+  color: white;
+}
+
+.guide .row {
+  width: 100%;
+}
 .guide .guideAvatar {
   height: 18vh;
   transform: rotate(45deg);
@@ -519,6 +775,51 @@ input[type=number]::-webkit-outer-spin-button {
   width: 100vw;
   text-align: center;
 }
+.registerUserPopUp {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  left: 0;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+.registerUserPopUp .proceedDialog {
+  width: 80%;
+  height: 120px;
+  margin: 50% auto 0;
+  border: 3px solid #F38F1C;
+  border-radius: 10px;
+  text-align: center;
+  background: white;
+}
+.registerUserPopUp .proceedDialog p {
+  color: #F38F1C;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+}
+.registerUserPopUp .proceedDialog button {
+  width: 50%;
+  background: #0ebade;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  height: 30px;
+  cursor: pointer;
+}
+.registerUserPopUp .proceedDialog button:hover {
+  background: #F38F1C;
+}
+.registerUserPopUp .proceedDialog button:focus {
+  outline: none;
+  border: none;
+}
+
 .appHead {
   height: 10vh;
 }
@@ -527,12 +828,14 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .appHead .logoHead .homeLogo {
   height: 100%;
+  cursor: pointer;
 }
 .appHead .mainMenu {
   height: 100%;
 }
 .appHead .mainMenu .menuIcon {
   height: 100%;
+  cursor: pointer;
 }
 
 .dropdown__control {
@@ -634,6 +937,15 @@ input[type=number]::-webkit-outer-spin-button {
 
 input:-webkit-autofill {
   background-color: none !important;
+}
+
+.disabled {
+  cursor: not-allowed !important;
+}
+
+.btn-orange {
+  background: #F38F1C;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

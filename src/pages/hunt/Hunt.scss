@@ -1,0 +1,64 @@
+.shopContainer{
+    width: 95%;
+    margin: 10px auto;
+    height: 90px;
+    border-radius: 10px;
+    border: 2px solid #F38F1C;
+    padding: 10px;
+    background: rgba(0,0,0,0.5);
+    position: relative;
+    .shopImage{
+        border: 2px solid #F38F1C;
+        border-radius: 10px;
+        overflow: hidden;
+        img{
+            width: 100%;
+        }
+    }
+    .shopTitle{
+        .mainTitle{
+            color: #F38F1C;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+        .cuisineLabel{
+            color: #fff;
+            font-size: 10px;
+            font-style: italic;
+            margin-bottom: 0;
+        }
+    }
+    .shopButtons{
+        .shopClick{            
+            border: none;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+            font-weight: bold;  
+            height: 20px;
+            font-size: 12px;
+            width: 100%;
+            cursor: pointer;
+            &:focus{
+                border: none;
+                box-shadow: none;
+                outline: none;        
+            }
+        }
+    }
+    .rating{
+        height: 25px;
+        width: 25px;
+        border: 1px solid #F38F1C;
+        position: absolute;
+        top: -10px;
+        right: -5px;
+        border-radius: 5px;   
+        text-align: center;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 1.75;
+        color: white;
+    }
+}

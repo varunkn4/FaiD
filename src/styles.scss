@@ -1,6 +1,11 @@
 @import './pages/login/Login';
 @import './pages/home/Home';
 @import './pages/register/Register';
+@import './pages/loading/Loading';
+@import './pages/recommendations/Recommendations';
+@import './pages/explore/Explore';
+@import './pages/crave/Crave';
+@import './pages/hunt/Hunt';
 @import './containers/registration/Registration';
 @import './containers/appHeader/AppHeader';
 @import './components/dropdown/Dropdown';
@@ -27,4 +32,11 @@
 }
 input:-webkit-autofill {
     background-color: none !important;
+}
+.disabled{
+    cursor: not-allowed !important;
+}
+.btn-orange{
+    background: #F38F1C;
+    color: white;
 }
